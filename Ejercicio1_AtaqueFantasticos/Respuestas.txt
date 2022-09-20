@@ -1,0 +1,15 @@
+﻿Preguntas:
+1. ¿Qué crítica le harías al protocolo de #estaHerido y #noEstaHerido? (en vez de tener solo el mensaje #estaHerido y hacer “#estaHerido not” para saber la negación)
+Creo que nos aporta legibilidad al código, y nos permite comunicar con facilidad lo que queremos validar.
+
+
+2. ¿Qué opinan de que para algunas funcionalidades tenemos 3 tests para el mismo comportamiento pero aplicando a cada uno de los combatientes (Arthas, Mankrik y Olgra)
+Los tests, son los que validan la funcionalidad de cada objeto, y como es esta oportunidad tenemos 3 diferentes objetos y tenerlos definidos así preservamos el encapsulamiento ya que no necesitamos preguntar qué tipo de objeto es. 
+
+
+3. ¿Cómo modelaron el resultado de haber desarrollado un combate? ¿qué opciones consideraron y por qué se quedaron con la que entregaron y por qué descartaron a las otras?
+Lo pensé como un clásico juego de 2 bandos, entonces, definimos el objeto OrquestadorDeCombates y creamos los mensajes necesarios para efectuar el juego.
+* Establecemos los bandos, cuyos combatientes serán pasados como colaboradores externos.  
+* Colocamos a cada bando sus enemigos, que serán los bandos contrarios.
+* Con ello desarrollamos la ronda, que para cada juegoRonda estemos validados para seguir en combate hasta que definamos el  resultado.
+* Los mensajes del resultado, para ser legibles el código serán definidos como métodos.
