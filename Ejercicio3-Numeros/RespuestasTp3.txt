@@ -1,0 +1,25 @@
+Preguntas teóricas
+1) Aporte de los mensajes de DD: En un double dispatch (DD), ¿qué información aporta cada uno de los dos llamados?
+
+Rpta: El uso de este patrón de diseño que se dio en este TP es, porque el resultado del comportamiento no depende sólo del Objeto que recibe el mensaje, sino también del parámetro enviado (o colaboradores externos) en ese mensaje.
+Entonces la idea es que cuando un Objeto1 recibe como mensaje,un operador aritmetico Objeto2, este delega la resolución al otro objeto (Objeto2) invocando un método más preciso. 
+ 
+ 
+2) Lógica de instanciado: Con lo que vieron y saben hasta ahora, ¿donde les parece mejor tener la lógica de cómo instanciar un objeto? ¿por qué? ¿Y si se crea ese objeto desde diferentes lugares y de diferentes formas? ¿cómo lo resuelven?
+
+Rpta: En este ejercicio efectuamos la instancia dentro de un metodo de class que corresponda pero tambien teniamos el caso de Entero que tenia subclasses, y para poder instanciarlas usamos un switch dinamico dentro del metodo de class que corresponda.
+
+3) Nombres de las categorías de métodos:Con lo que vieron y trabajaron hasta ahora, ¿qué criterio están usando para categorizar métodos?
+
+Rpta: La categorizacion de los metodos, se da por el comportamiento similar de los mensajes, cuyo nombre concreto representa el comportamiento de las mismas. 
+
+4) Subclass Responsibility: Si todas las subclases saben responder un mismo mensaje, ¿por qué ponemos ese mensaje sólo con un “self subclassResponsibility” en la superclase? ¿para qué sirve?
+
+Rpta: Como bien se menciona la implementacion de una superclase es simplemente, “self subclassResponsibility”, pero lo importante es que el metodo sigue definiendo lo que este mensaje
+hace para toda la jerarquia. Osea cualquier implementacion de la subclase debe hacer lo mismo, su implementacion son diferentes pero sus propositos son los mismos. 
+
+
+5) No rompas: ¿Por qué está mal/qué problemas trae romper encapsulamiento?
+
+Rpta: Para interactuar con un Objeto, solo debo de saber el comportamiento, los detalles internos quedan encapsulados en el objeto. Así nos permite separar mejor las responsabilidades y evitar modificaciones internas como los atributos por entidades externas generando fallas.  
+
